@@ -2,6 +2,12 @@
 
 
 import dynamic from 'next/dynamic';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Services from './components/Services';
+import Products from './components/Products';
+import Gallery from './components/Gallery';
+import Contact from './components/Contact';
 
 const DynamicMap = dynamic(() => import('./components/Maps'), {
   ssr: false,
