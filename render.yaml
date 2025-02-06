@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: nextjs-app
+    env: node
+    buildCommand: "npm install && npm run build"
+    startCommand: "npm run start"  # Adjust if your start command is different
+    plan: free  # Change to another plan if necessary
+    branch: main  # Default to the main branch for deployment
+    envVars:
+      - key: NODE_ENV
+        value: production
+    autoDeploy: true  # Automatically deploy when there are changes to the main branch
+    # Optional: Add a custom domain if you have one
+    # domains:
+    #   - www.yourcustomdomain.com
+    # Optional: If you use a database like PostgreSQL, configure it here:
+    # database:
+    #   type: postgres
+    #   name: nextjs-db
+    #   plan: free
+    #   region: us-east
