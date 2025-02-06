@@ -8,6 +8,7 @@ import Services from './components/Services';
 import Products from './components/Products';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 const DynamicMap = dynamic(() => import('./components/Maps'), {
   ssr: false,
